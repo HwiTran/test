@@ -1,1 +1,10 @@
 Update code
+
+
+1. Chỉnh sửa lại hàm def load_vector_db(pdf_file)
+
+2. Chỉnh sửa lại hàm main
+Hàm cũ: mình phải cần có đủ file PDF và user_input mới có thể run
+Chỉnh sửa lại: 2 hàm tách biệt, k liên quan gì với nhau  
+  - Upload PDF và embedding (Khi upload và embedding xong sẽ hiển thị "PDF has been successfully embedded!")
+  - Sau đó nhập câu promt 
