@@ -185,34 +185,6 @@ def main():
                     st.success("PDF has been successfully embedded!")
             except Exception as e:
                 st.error(f"An error occurred while embedding the PDF: {str(e)}")
-                
-    # user_input = st.text_input("Enter your question:", "")
-    # # Xử lý câu hỏi của người dùng
-    # if user_input:
-    #     with st.spinner("Generating response..."):
-    #         try:
-    #             if not os.path.exists(PERSIST_DIRECTORY):
-    #                 st.error("No embedded documents found. Please upload and embed a PDF first.")
-    #                 return
-
-    #             # Tải cơ sở dữ liệu vector
-    #             vector_db = Chroma(
-    #                 embedding_function=OllamaEmbeddings(model=EMBEDDING_MODEL),
-    #                 collection_name=VECTOR_STORE_NAME,
-    #                 persist_directory=PERSIST_DIRECTORY,
-    #             )
-
-    #             # Tạo retriever và chain
-    #             llm = ChatOllama(model=MODEL_NAME)
-    #             retriever = create_retriever(vector_db, llm)
-    #             chain = create_chain(retriever, llm)
-
-    #             # Lấy phản hồi
-    #             response = chain.invoke(input=user_input)
-    #             st.markdown("**Assistant:**")
-    #             st.write(response)
-    #         except Exception as e:
-    #             st.error(f"An error occurred: {str(e)}")
 
     if "last_user_input" not in st.session_state:
         st.session_state.last_user_input = ""
@@ -250,10 +222,7 @@ def main():
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
 
-if __name__ == "__main__":
-    main()
-    
-# if uploaded_file and user_input:
+    # if uploaded_file and user_input:
     #     with st.spinner("Generating response..."):
     #         try:
     #             # Save uploaded file temporarily
@@ -287,3 +256,7 @@ if __name__ == "__main__":
     #     st.info("Please upload a PDF file to get started.")
     # elif not user_input:
     #     st.info("Please enter a question to get started.")
+
+if __name__ == "__main__":
+    main()
+    
