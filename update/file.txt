@@ -1,5 +1,5 @@
 Update code
-
+Phần comment là code cũ
 
 1. Chỉnh sửa lại hàm def load_vector_db(pdf_file)
 
